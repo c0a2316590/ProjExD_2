@@ -51,7 +51,7 @@ def gameover(screen: pg.Surface) -> None:
     # こうかとんの表示
     kk_img = pg.image.load("fig/8.png")
     kk_rct = kk_img.get_rect()
-    kk_rct.center = WIDTH/2, HEIGHT/2
+    kk_rct.center = WIDTH / 2, HEIGHT / 2
     screen.blit(kk_img, [kk_rct[0]-200, kk_rct[1]])
     screen.blit(kk_img, [kk_rct[0]+200, kk_rct[1]])
     pg.display.update()
