@@ -11,6 +11,7 @@ DELTA = {pg.K_UP: (0, -5),
          pg.K_LEFT: (-5, 0),
          pg.K_RIGHT: (+5, 0),
          }
+
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -71,6 +72,23 @@ def init_bb_imgs() -> tuple[list[pg.Surface], list[int]]:
         bb_img.set_colorkey((0, 0, 0))  # 四隅の黒を透過
         bb_lst.append(bb_img)  # 拡大爆弾のリストに追加
     return bb_lst, accs
+
+
+# def get_kk_img(sum_mv: tuple[int, int]) -> pg.Surface:
+#     """
+    
+#     """    
+#     kk_img = pg.image.load()
+#     kk_img_dist = {(0, -5): pg.transform.rotozoom(),
+#                    (+5, -5):,
+#                    (+5, 0):,
+#                    (+5, +5):,
+#                    (0, +5):,
+#                    (-5, 5):,
+#                    (-5, 0):,
+#                    (-5, -5):,
+#                    }
+
 
 def main():
     pg.display.set_caption("逃げろ！こうかとん")
